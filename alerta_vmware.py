@@ -7,7 +7,8 @@ class VmwareTrapTransformer(PluginBase):
 
     def pre_receive(self, alert):
 
-        LOG.info(alert.attributes['trapvars'])
+        if "SNMPv1" not in alert.tags:
+            return alert
         alert.resource = alert.attributes['trapvars']['_5']
         alert.event = alert.attributes['trapvars']['_4'].split('-')[0].strip()
         alert.text = alert.attributes['trapvars']['_4']
