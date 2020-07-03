@@ -25,5 +25,5 @@ class VmwareTrapTransformer(PluginBase):
     def post_receive(self, alert):
         return
 
-    def status_change(self, alert):
+    def status_change(self, alert, status, text):
         return
