@@ -11,13 +11,13 @@ setup(
     author='Your name',
     author_email='your.name@example.com',
     packages=find_packages(),
-    py_modules=['alerta-vmware'],
+    py_modules=['alerta_vmware'],
     install_requires=[],
     include_package_data=True,
     zip_safe=True,
     entry_points={
         'alerta.plugins': [
-            'vmware = alerta-vmware:VmwareTrapTransformer'
+            'vmware = alerta_vmware:VmwareTrapTransformer'
         ]
     }
 )
